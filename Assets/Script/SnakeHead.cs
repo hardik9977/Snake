@@ -87,7 +87,7 @@ public class SnakeHead : MonoBehaviour
     {
         float newXPosition = UnityEngine.Random.Range(-Mathf.Floor(Mathf.Abs(bound.x)), Mathf.Floor(Mathf.Abs(bound.x)));
         float newYPosition = UnityEngine.Random.Range(-Mathf.Floor(Mathf.Abs(bound.y)), Mathf.Floor(Mathf.Abs(bound.y)));
-        gameObject.transform.position = new Vector3(newXPosition, newYPosition, 0);
+        gameObject.transform.position = new Vector3(Mathf.Floor(newXPosition), Mathf.Floor(newYPosition), 0);
     }
 
     public IEnumerator RestartGame()
